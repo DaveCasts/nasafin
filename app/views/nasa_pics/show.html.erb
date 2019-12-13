@@ -1,0 +1,11 @@
+
+<h1>SHOW</h1>
+
+<h1><%= @nasa_show['title'] %></h1>
+<% if @media_type_is_video %>
+  http://%=%20@nasa_show[
+<% else %>
+  <img src="<%= @nasa_show["url"] %>"/>
+<% end %> 
+<p><%= @nasa_show["explanation"] %></p>
+<p><%= @nasa_show["date"] %></p>
