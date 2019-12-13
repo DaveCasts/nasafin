@@ -1,11 +1,21 @@
 
-<h1>SHOW</h1>
 
-<h1><%= @nasa_show['title'] %></h1>
-<% if @media_type_is_video %>
-  http://%=%20@nasa_show[
-<% else %>
-  <img src="<%= @nasa_show["url"] %>"/>
-<% end %> 
-<p><%= @nasa_show["explanation"] %></p>
-<p><%= @nasa_show["date"] %></p>
+<h1>NASA Astronomy Picture Of The Day</h1>
+
+<div class="booyah-box">
+
+  <h1><%= @nasa_show["title"] %></h1>
+  <% if @media_type_is_video %>
+    http://%=%20@nasa_show[
+  <% else %>
+    <img src="<%= @nasa_show["url"] %>"/>
+  <% end %> 
+  <p><%= @nasa_show["explanation"] %></p>
+  <h3><%= @nasa_show["date"] %></h3>
+  
+  <h2 id="title"></h2>
+  <h3>Date: <span id="date"></span></h3>
+  <img id="pic" src="" alt="NASA Picture Of The Day" width="100%">
+  <p id="explanation"></p>
+
+</div>

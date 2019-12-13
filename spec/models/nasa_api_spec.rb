@@ -1,5 +1,5 @@
-require 'rails_helper'
+# require 'rails_helper'
 
-RSpec.describe NasaApi, type: :model do
+# RSpec.describe NasaApi, type: :model do
   
-end
+# end
