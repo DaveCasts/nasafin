@@ -9,6 +9,7 @@ module NasaPicsHelper
     #p ENV['NASA_API_KEY']
     #p "https://api.nasa.gov/planetary/apod?api_key=#ENV['NASA_API_KEY']"
     uri = URI("https://api.nasa.gov/planetary/apod" + NASA_API_KEY)
+    p uri.host
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
