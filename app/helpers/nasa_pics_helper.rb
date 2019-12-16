@@ -1,6 +1,7 @@
 require 'uri'
 require 'net/http'
 require 'openssl'
+require 'json'
 module NasaPicsHelper 
 
   NASA_API_KEY = "?api_key=#{ENV['NASA_API_KEY']}"
@@ -15,9 +16,7 @@ module NasaPicsHelper
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     request_to_nasa_api = Net::HTTP::Get.new(uri)
     response = http.request(request_to_nasa_api)
-    #JSON.parse request_to_nasa_api
-    #puts response.read_body
-    response.read_body
+    response_hash = JSON.parse(response.read_body)
   end
 end
 
