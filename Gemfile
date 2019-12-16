@@ -74,6 +74,4 @@ end
 
 gem 'openssl'
 
-gem 'figaro'
-
 gem 'dotenv-rails', :groups => [:development, :test]
