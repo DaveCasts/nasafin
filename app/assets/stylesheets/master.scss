@@ -1,0 +1,50 @@
+@import "bootstrap";
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin: 10px 0px 15px 0px;
+  padding: 20px 20px 46px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
+  color: #e83225;
+}
+
+li.nav-item {
+  color: white !important;
+}
+
+fa fa-plus-circle{
+  color: white !important;
+}
+
+body {
+  background: image_url('dark-paths.png');
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+.navbar {
+  background: image_url('starring.png');
+  box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-light a.navbar-brand {
+  color: white;
+  font-family: 'cantarellbold', sans-serif;
+  font-size: 26px;
+  }
+
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: white !important;
+}
