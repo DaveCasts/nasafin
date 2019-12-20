@@ -13,8 +13,19 @@
 
   <body>
 
-    <nav class="navbar navbar-toggleable-md navbar-light bg-light">
-      <%= link_to 'NASA APIs', root_path, class: 'navbar-brand' %>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-light justify-content-between">
+      <%= link_to 'NASA', root_path, class: 'navbar-brand center' %>
+
+      <%= form_tag(search_page_path, :method => "get",   
+          class: 'form-inline') do %>  
+        <div class="input-group">  
+          <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control mr-sm-2" %>  
+          <div class="input-group-btn">  
+            <%= button_tag "Search", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+          </div>  
+        </div>  
+      <% end %>
+      
 
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,12 +34,47 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item">
-            <i class="fa fa-plus-circle"></i>
-              Todays picture
+            <%= link_to root_path, class: 'nav-link' do %> Todays picture
+            <% end %>
           </li>
         </ul>
       </div>
     </nav>
+
     <%= yield %>
+
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-3">
+            <b>About</b>
+            <br />
+            <%= link_to 'Team', '#' %>
+            <br />
+            <%= link_to 'Careers', '#' %>
+            <br />
+            <%= link_to 'Privacy Policy', '#' %>
+          </div>
+          <div class="a col-12 col-sm-3">
+            <b>Contact</b>
+            <br />
+            daveacamposc@gmail.com
+            <br />
+            One Kendall Square
+            <br />
+            Cambridge MA, 02113
+          </div>
+          <div class="col-12 col-sm-3 social">
+            <b>Social</b>
+            <br />
+            <br />
+            <%= link_to '#' do %>
+              <span class="fa fa-github-square fa-2x social-button"></span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>

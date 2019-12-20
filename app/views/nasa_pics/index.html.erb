@@ -1,11 +1,15 @@
 
-<h1>Nasa daily pictures</h1>
+<h1>NASA Astronomy Picture Of The Day</h1>
 
-<!-- <h1><%= @nasa_info["title"] %></h1>
-<% if @media_type_is_video %>
-  http://%=%20@nasa_info[
-<% else %>
-  <img src="<%= @nasa_info["uri"] %>"/>
-<% end %> 
-<p><%= @nasa_info["explanation"] %></p>
-<p><%= @nasa_info["date"] %></p> -->
+<div class="booyah-box">
+  <h1><%= @nasa_index["title"] %></h1>
+  <% if @media_type_is_video %>
+    http://%=%20@nasa_index[
+  <% else %>
+    <img src="<%= @nasa_index["url"] %>"/>
+  <% end %> 
+  <p><%= @nasa_index["explanation"] %></p>
+  <h3><%= @nasa_index["date"] %></h3>
+  
+
+</div>
