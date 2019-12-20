@@ -18,13 +18,3 @@ module NasaIvlApiClient
     response_hash = JSON.parse(response.read_body)
   end
 end
-
-# def self.search(search)
-#   if search
-#     find(:all, conditions:['name LIKE ?', "%#{search}%"])
-#   else
-#     find(:all)
-#   end
-# end
-
-#p NasaIvlApiClient.search("venus")

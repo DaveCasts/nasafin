@@ -10,7 +10,7 @@ RSpec.describe IvlSearchController, type: :controller do
 
   describe "ivl_search#index" do 
     it "should successfully paginate and check the media type of results" do
-
+      get :index
       expect(response).to have_http_status(:success)
     end
   end

@@ -7,5 +7,10 @@ RSpec.describe NasaPicsController, type: :controller do
       get :index
       expect(response).to have_http_status(:success)
     end
+
+    # it "should show error message if apod cannot be shown" do
+    #   get :index
+    #   expect(response).to have_http_status(503)
+    # end
   end
 end
