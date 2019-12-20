@@ -1,0 +1,26 @@
+
+
+
+
+<% results["collection"]["items"].each do |result| %>
+  <div class="booyah-box">
+    <div class="row">
+      <p><% result["data"].each do |data| %></p>
+        <h1><%= data["title"] %></h1>
+        <p><%= data["description"] %></p>
+        <h3><%= data["date_created"] %></h3>
+      <% end %>
+      </div>
+      <br />
+      <div class="row">
+      <% unless result["links"].nil? %>
+        <% result["links"].each do |link| %>
+          <% if link["render"] == "image" %>
+            <%= image_tag link["href"] %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
