@@ -10,12 +10,8 @@ class IvlSearchController < ApplicationController
 
 
   def index
-    @ivl_index = NasaIvlApiClient.ivl_show()
-    @media_type_is_video = @ivl_index['media_type'].eql?('video')
+
   end
-
-
-  #(params[:search]).paginate(page: params[:page], per_page: 15)
 
   #.paginate(page: params[:page], per_page: 15)
 
