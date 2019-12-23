@@ -7,16 +7,20 @@
     <div class="row">
       <p><% result["data"].each do |data| %></p>
         <h1><%= data["title"] %></h1>
+        <hr />
         <p><%= data["description"] %></p>
+        <hr />
         <h3><%= data["date_created"] %></h3>
       <% end %>
-      </div>
       <br />
-      <div class="row">
+    </div>
+      <br />
+      <br />
+    <div class="row">
       <% unless result["links"].nil? %>
         <% result["links"].each do |link| %>
           <% if link["render"] == "image" %>
-            <%= image_tag link["href"] %>
+            <p><%= image_tag link["href"] %></p>
           <% end %>
         <% end %>
       <% end %>
