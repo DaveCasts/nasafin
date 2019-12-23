@@ -5,6 +5,6 @@ class NasaPicsController < ApplicationController
 
   def index
     @nasa_index = NasaApodApiClient.apod_show()
-    @media_type_is_video = @nasa_index['media_type'].eql?('video')
+    @media_type_is_video = @nasa_index["media_type"].eql?("video")
   end
 end
