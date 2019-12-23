@@ -173,3 +173,7 @@ body {
   *:first-child + html .digg_pagination {
     overflow: hidden; 
   }
+
+  iframe {
+    border-width: 0px !important;
+  }

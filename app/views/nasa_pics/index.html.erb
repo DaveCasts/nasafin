@@ -4,12 +4,12 @@
 <div class="booyah-box">
   <h1><%= @nasa_index["title"] %></h1>
   <% if @media_type_is_video %>
-    http://%=%20@nasa_index[
+    <iframe src="<%= @nasa_index["url"] %>" width="auto" height="auto" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   <% else %>
     <img src="<%= @nasa_index["url"] %>"/>
   <% end %> 
   <p><%= @nasa_index["explanation"] %></p>
   <h3><%= @nasa_index["date"] %></h3>
-  
 
 </div>
+
